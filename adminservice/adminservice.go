@@ -7,7 +7,7 @@ import (
 
 func main() {
 	const username = "adminservice1"
-	const password = "Hengelo1491!"
+	const password = "MegacorpPentest1!"
 
 	println("creating local user")
 
