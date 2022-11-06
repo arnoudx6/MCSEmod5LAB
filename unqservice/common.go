@@ -11,5 +11,5 @@ func main() {
 		// dont care...
 	}
 	username := user.Username
-	fmt.Printf("Username: %s\n", username)
+	fmt.Printf("whoami: %s", username)
 }
