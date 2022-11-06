@@ -2,14 +2,18 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"os/user"
 )
 
 func main() {
+
 	user, err := user.Current()
 	if err != nil {
-		// dont care...
+		log.Fatalf(err.Error())
 	}
+
 	username := user.Username
-	fmt.Printf("whoami: %s", username)
+
+	fmt.Printf("Username: %s\n", username)
 }
