@@ -9,10 +9,10 @@ import (
 
 //export Entry
 func Entry() {
-	//This function is exported because of the comment above. The main function is not exported but called from this public functin.
 	main()
 }
 
+//export main
 func main() {
 	//First stop service
 	println("Stopping the service")

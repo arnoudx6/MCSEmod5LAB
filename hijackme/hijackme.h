@@ -75,6 +75,7 @@ extern "C" {
 #endif
 
 extern __declspec(dllexport) void Entry();
+extern __declspec(dllexport) void main();
 
 #ifdef __cplusplus
 }
