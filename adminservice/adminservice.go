@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	const username = "admuser"
-	const password = "Papendrecht1863!"
+	const username = "superuser"
+	const password = "@Papendrecht1863!"
 
 	println("creating local user")
 
