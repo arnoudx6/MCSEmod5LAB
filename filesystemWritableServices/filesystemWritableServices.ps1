@@ -1,4 +1,4 @@
-$services = Get-CimInstance win32_service | PathName #Get all services 
+$services = Get-CimInstance win32_service | Select-Object PathName #Get all services 
 $services = $services | where {$_.PathName -ne $null} #Only services with a path
 $servicePaths = $services | foreach{$_.PathName.Substring(0, $_.PathName.IndexOf('.exe'))} #Add +4 for adding .exe
 $servicePaths = $servicePaths | foreach{$_ -replace '"'} #Replace the quotes from the path because powershell cant handle this
